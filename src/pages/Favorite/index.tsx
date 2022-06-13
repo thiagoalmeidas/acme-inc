@@ -1,9 +1,15 @@
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Nav from "../../components/nav"
+import { useState } from "react"
 
 
 function Favorite() {
+
+ const storageData = JSON.parse(localStorage.getItem('favorite')|| '')
+ const [data, setData] = useState(storageData)
+ storageData.shift()
+
   return (
     <>
       <Nav />
@@ -22,18 +28,18 @@ function Favorite() {
               </thead>
               
 
-              {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
-                return (
+              {/* {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
+                return ()
+              })} */}
                   <tbody >
                     <tr>
-                      <th scope="row">{produtoId}</th>
-                      <td><img src={img} width={100} alt=''/></td>
-                      <td>{verbo} - {adjetivo}</td>
-                      <td>R${price}</td>
+                      <th scope="row">{data.produtoId}</th>
+                      <td><img src={data.img} width={100} alt=''/></td>
+                      <td>{data.verbo} - {data.adjetivo}</td>
+                      <td>R${data.price}</td>
                     </tr>                
                   </tbody>
-                )
-              })}
+                
 
 
             </table>

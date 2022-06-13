@@ -12,15 +12,7 @@ type CatProd = {
     price: Number
     img: String
 };
-let favoritesList= [{
-        produtoId: 1,
-        verbo: 'React',
-        adjetivo: 'Bondoso',
-        description: 'Lectus quam id leo in vitae turpis massa sed. Varius morbi enim nunc faucibus.',
-        price: 0,
-        img: 'https://picsum.photos/id/101/200/200'
-    }
-]
+let favoritesList: (string | number)[] = []
 
 function Card(props: CatProd) {
     const favoritesDesc= [{
@@ -32,6 +24,7 @@ function Card(props: CatProd) {
         img: props.img
     }
     ]
+    const idProduct = props.produtoId
     
     function btnFavorite() {
        

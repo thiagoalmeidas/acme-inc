@@ -102,19 +102,19 @@ function Home() {
         <div className="row pb-4">
           <section>
             <div className="row row-cols-2 pt-4 row-cols-md-4 g-4">
-              {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
-                return (
+              {/* {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
+                return ()
+              })} */}
                   <Card
-                    key={produtoId}
-                    verbo={verbo}
-                    adjetivo={adjetivo}
-                    description={description}
-                    price={price}
-                    img={img} 
-                    produtoId={produtoId}
+                    key={data.produtoId}
+                    verbo={data.verbo}
+                    adjetivo={data.adjetivo}
+                    description={data.description}
+                    price={data.price}
+                    img={data.img} 
+                    produtoId={data.produtoId}
                   />
-                )
-              })}
+                
               
             </div>
           </section>
