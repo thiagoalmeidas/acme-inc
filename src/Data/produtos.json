@@ -1,0 +1,29 @@
+{
+	"produtos": [		 
+		{
+			"produtoId": 1,
+			"verbo": "React",
+        	"adjetivo":"Bondoso",
+			"description": "Lectus quam id leo in vitae turpis massa sed. Varius morbi enim nunc faucibus.",
+			"price": "20",
+			"img": "https://picsum.photos/id/101/200/200"				
+		},
+		{
+			"produtoId": 2,
+			"verbo": "bbbb",
+        	"adjetivo":"bdbdbdbdbd",
+			"description": "Lectus quam id leo in vitae turpis massa sed. Varius morbi enim nunc faucibus.",
+			"price": "20",
+			"img": "https://picsum.photos/id/103/200/200"				
+		},
+		{
+			"produtoId": 3,
+			"verbo": "cccccc",
+        	"adjetivo":"cdcdcdcd",
+			"description": "Lectus quam id leo in vitae turpis massa sed. Varius morbi enim nunc faucibus.",
+			"price": "20",
+			"img": "https://picsum.photos/id/104/200/200"				
+		}	
+		
+	]
+}
