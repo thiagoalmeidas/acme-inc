@@ -83,16 +83,16 @@ function Home() {
 
     if (!existsVerbo && !existsAdjetivo && !existsImg && !existsId) {
       prods.push(searchProd[0])
-      localStorage.setItem('prods', JSON.stringify(prods))      
+      // localStorage.setItem('prods', JSON.stringify(prods))      
     }    
   }
 
     
-  const jsonProds = JSON.parse(localStorage.getItem('prods')|| '') 
+  // const jsonProds = JSON.parse(localStorage.getItem('prods')|| '') 
 
-  const [data, setData] = useState(jsonProds)
+  const [data, setData] = useState(prods)
 
-  jsonProds.shift()
+  prods.shift()
  
   return (
     <>
@@ -102,20 +102,20 @@ function Home() {
         <div className="row pb-4">
           <section>
             <div className="row row-cols-2 pt-4 row-cols-md-4 g-4">
-              {/* {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
-                return ()
-              })} */}
-                  <Card
-                    key={data.produtoId}
-                    verbo={data.verbo}
-                    adjetivo={data.adjetivo}
-                    description={data.description}
-                    price={data.price}
-                    img={data.img} 
-                    produtoId={data.produtoId}
-                  />
-                
+              {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
+                return (
               
+                  <Card
+                    key={produtoId}
+                    verbo={verbo}
+                    adjetivo={adjetivo}
+                    description={description}
+                    price={price}
+                    img={img} 
+                    produtoId={produtoId}
+                  />
+                )
+              })}
             </div>
           </section>
 
