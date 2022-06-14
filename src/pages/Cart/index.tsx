@@ -38,7 +38,7 @@ const [data, setData] = useState(produtos )
                   <tbody key={produtoId}>
                     <tr >
                       <th>{produtoId}</th>
-                      <td><img src={img} width={100} alt={verbo}/></td>
+                      <td><img src={img} width={70} alt={verbo}style={{borderRadius: '1rem'}}/></td>
                       <td>{verbo} - {adjetivo}</td>
                       <td>{description}</td>
                       <td>R${price}</td>

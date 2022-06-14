@@ -81,16 +81,16 @@ function Home() {
 
     if (!existsVerbo && !existsAdjetivo && !existsImg && !existsId) {
       prods.push(searchProd[0])
-      // localStorage.setItem('prods', JSON.stringify(prods))      
+      sessionStorage.setItem('produtoStorage', JSON.stringify(prods))      
     }    
   }
 
     
-  // const jsonProds = JSON.parse(localStorage.getItem('prods')|| '') 
+  // const jsonProds = JSON.parse(localStorage.getItem('produtoStorage')|| '') 
 
   const [data, setData] = useState(prods)
 
-  // prods.shift()
+  prods.shift()
  
   return (
     <>
