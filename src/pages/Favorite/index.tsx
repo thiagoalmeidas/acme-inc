@@ -7,8 +7,7 @@ import { produtos } from '../../Data/produtos.json'
 
 function Favorite() {
 
-// const storageData = JSON.parse(localStorage.getItem('favorite')|| '')
-const [data, setData] = useState(produtos)
+  const [data, setData] = useState(produtos)
 
   return (
     <>
@@ -23,19 +22,21 @@ const [data, setData] = useState(produtos)
                   <th scope="col">Id#</th>
                   <th scope="col">Imagem</th>
                   <th scope="col">Produto</th>
-                  <th scope="col">Preco</th>                  
+                  <th scope="col">Preço</th>
+                  <th scope="col">Excluir</th>                  
                 </tr>
               </thead>
               
 
-              {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
+              {data.map((data:any) => {
                 return (
-                  <tbody key={produtoId}>
+                  <tbody key={data.produtoId}>
                     <tr>
-                      <th scope="row">{produtoId}</th>
-                      <td><img src={img} width={70} alt={verbo}style={{borderRadius: '1rem'}}/></td>
-                      <td>{verbo} - {adjetivo}</td>
-                      <td>R${price}</td>
+                      <th scope="row">{data.produtoId}</th>
+                      <td><img src={data.img} width={70} alt={data.verbo} style={{borderRadius: '1rem'}}/></td>
+                      <td>{data.verbo} - {data.adjetivo}</td>
+                      <td>R${data.price}</td>
+                      <td><button className="d-flex justify-content-center align-items-center btn btn-outline-danger" style={{borderRadius: '1rem'}}>Excluir</button></td>
                     </tr>                
                   </tbody>
                 )
