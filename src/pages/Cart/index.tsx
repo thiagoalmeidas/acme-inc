@@ -2,6 +2,7 @@ import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Nav from "../../components/nav"
 import { produtos } from '../../Data/produtos.json'
+import { useState } from "react"
 
 
 function Cart() {
@@ -9,8 +10,11 @@ function Cart() {
 //   return ( 
 //     price++)
 // })
+const [data, setData] = useState(produtos )
   return (
+   
     <>
+    
       <Nav />
       <div className="container">
         <Header title='Carrinho de Compras' subtitle='Produtos Favoritos selecionados!' />
@@ -23,18 +27,20 @@ function Cart() {
                   <th scope="col">Id#</th>
                   <th scope="col">Imagem</th>
                   <th scope="col">Produto</th>
+                  <th scope="col">Descricao</th>
                   <th scope="col">Preco</th>                  
                 </tr>
               </thead>
               
 
-              {produtos.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
+              {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
                 return (
-                  <tbody >
-                    <tr>
+                  <tbody key={produtoId}>
+                    <tr >
                       <th>{produtoId}</th>
-                      <td><img src={img} width={100} alt=''/></td>
+                      <td><img src={img} width={100} alt={verbo}/></td>
                       <td>{verbo} - {adjetivo}</td>
+                      <td>{description}</td>
                       <td>R${price}</td>
                     </tr>                
                   </tbody>

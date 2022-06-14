@@ -22,17 +22,12 @@ function singleProduct() {
                     src={produtos[0].img} 
                     className="w-100 mb-3" 
                     alt={produtos[0].verbo} 
-                    style={{
-                            borderRadius: '1rem'
-                          }}
+                    style={{borderRadius: '1rem'}}
                 />
                 <BtnFavorite />
               </div>
               <div className="col-lg-6">
-                <div className=' p-5' style={{
-                                                      backgroundColor: 'rgb(239 239 239)',
-                                                      borderRadius: '1rem'
-                                                    }}>
+                <div className=' p-5' style={{backgroundColor: 'rgb(239 239 239)',borderRadius: '1rem'}}>
                   <h1>{produtos[0].verbo}</h1>
                   <p>{produtos[0].description}</p>
                   <p>{produtos[0].description}</p>
@@ -40,9 +35,8 @@ function singleProduct() {
                   <div className="col-sm-6">
                     <p className='mt-4'><BtnAddCart /></p>
                   </div>
-                </div>           
+              </div>          
               
-              <p></p>
               </div>
             </div>
           </section>

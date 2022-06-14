@@ -12,25 +12,12 @@ type CatProd = {
     price: Number
     img: String
 };
-let favoritesList: (string | number)[] = []
 
 function Card(props: CatProd) {
-    const favoritesDesc= [{
-        produtoId: props.produtoId,
-        verbo: props.verbo,
-        adjetivo: props.adjetivo,
-        description: props.description,
-        price: props.price,
-        img: props.img
-    }
-    ]
-    const idProduct = props.produtoId
     
     function btnFavorite() {
-       
+       alert('Clicando na Estrela de Favorito')
     }
-
-
     
     return (
         <div className="col">
@@ -43,9 +30,10 @@ function Card(props: CatProd) {
                 </button>
                 <div className="card-body">
                     <h5 className="card-title">{props.verbo} -
-                        <small style={{
-                            color: '#888',
-                        }}> {props.adjetivo}</small></h5>
+                        <small style={{color: '#888'}}> 
+                        {props.adjetivo}
+                        </small>
+                    </h5>
                     <p className="card-text">{props.description}</p>
                     <p className="card-text fw-bold">R$ {props.price.toFixed(2)}</p>
                     <div className="d-flex align-items-center justify-content-center">

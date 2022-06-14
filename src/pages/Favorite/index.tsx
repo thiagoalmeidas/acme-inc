@@ -9,7 +9,6 @@ function Favorite() {
 
 // const storageData = JSON.parse(localStorage.getItem('favorite')|| '')
 const [data, setData] = useState(produtos)
-produtos.shift()
 
   return (
     <>
@@ -31,7 +30,7 @@ produtos.shift()
 
               {data.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
                 return (
-                  <tbody >
+                  <tbody key={produtoId}>
                     <tr>
                       <th scope="row">{produtoId}</th>
                       <td><img src={img} width={100} alt=''/></td>

@@ -55,24 +55,22 @@ function Home() {
 
     const prodId = randomList(2, 999)
     const prodVerbo = verbos[randomList(0, verbos.length)]
-    const prodNAdjetivo = adjetivos[randomList(0, adjetivos.length)]
+    const prodAdjetivo = adjetivos[randomList(0, adjetivos.length)]
     const prodDesc = description[randomList(0, description.length)]
 
     let descrLength = prodVerbo.length
-    let verboLength = prodNAdjetivo.length
-    let priceTotal = -(10 + verboLength * ((500 - descrLength) / (3 -
-      verboLength)))     
+    let verboLength = prodAdjetivo.length
+    let priceTotal = -(10 + verboLength * ((500 - descrLength) / (3 - verboLength)))     
 
     const image = "https://picsum.photos/id/" + randomList(10, 100) + "/200/200"
 
     const searchProd = [{
       produtoId: prodId,
       verbo: prodVerbo,
-      adjetivo: prodNAdjetivo,
+      adjetivo: prodAdjetivo,
       description: prodDesc,
       price: priceTotal,
       img: image
-
     }]
     
 
@@ -92,7 +90,7 @@ function Home() {
 
   const [data, setData] = useState(prods)
 
-  prods.shift()
+  // prods.shift()
  
   return (
     <>
