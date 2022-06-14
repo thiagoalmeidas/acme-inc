@@ -5,10 +5,10 @@ import { produtos } from '../../Data/produtos.json'
 
 
 function Cart() {
-const soma = produtos.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
-  return ( 
-    price)
-})
+// const soma = produtos.map(({ produtoId, verbo, adjetivo, price, description, img }) => {
+//   return ( 
+//     price++)
+// })
   return (
     <>
       <Nav />
@@ -44,7 +44,7 @@ const soma = produtos.map(({ produtoId, verbo, adjetivo, price, description, img
             <div className="col-md-4 text-center mx-2 p-2 bg-light shadow-sm row flex-content-center align-items-center h-100 justify-content-center"  
             style={{borderRadius: '1rem'}}>
               <h2>{produtos.length} Produtos</h2>
-              {soma} soma<br/>
+              {produtos[0].price} soma<br/>
             </div>
             </div>
           </section>
