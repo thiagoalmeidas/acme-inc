@@ -2,13 +2,21 @@ import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Nav from "../../components/nav"
 import { produtos } from '../../Data/produtos.json'
+
 import BtnAddCart from "../../components/button/adicionar"
 import BtnFavorite from "../../components/button/favorite"
 
+import { useParams } from 'react-router-dom'
+import React, { useState } from "react"
+
+
+// const [data, setData] = useState(produtos)
 
 
 
-function singleProduct() {
+function singleProduct() {  
+
+  const { id } = useParams()  
 
   return (
     <>
@@ -28,8 +36,7 @@ function singleProduct() {
               </div>
               <div className="col-lg-6">
                 <div className=' p-5' style={{backgroundColor: 'rgb(239 239 239)',borderRadius: '1rem'}}>
-                  <h1>{produtos[0].verbo}</h1>
-                  <p>{produtos[0].description}</p>
+                  <h1>{produtos[0].verbo} - <small>{produtos[0].adjetivo}</small></h1>
                   <p>{produtos[0].description}</p>
                   <b className='fs-4'>R${produtos[0].price}</b>
                   <div className="col-sm-6">

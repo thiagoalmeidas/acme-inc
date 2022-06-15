@@ -1,8 +1,11 @@
 import RoutesApp from './Routes'
+import { UserContextProvider } from './contexts/ProductsContext'
 
 function App() {
   return (
-    <RoutesApp/>
+    <UserContextProvider>
+      <RoutesApp/>
+    </UserContextProvider>
   );
 }
 

@@ -1,8 +1,10 @@
 import Header from "../../components/header"
 import Footer from "../../components/footer"
 import Nav from "../../components/nav"
+import BtnAddCart from "../../components/button/adicionar"
 import { useState } from "react"
 import { produtos } from '../../Data/produtos.json'
+import BtnDelete from "../../components/button/excluir"
 
 
 function Favorite() {
@@ -23,7 +25,7 @@ function Favorite() {
                   <th scope="col">Imagem</th>
                   <th scope="col">Produto</th>
                   <th scope="col">Preço</th>
-                  <th scope="col">Excluir</th>                  
+                               
                 </tr>
               </thead>
               
@@ -36,8 +38,8 @@ function Favorite() {
                       <td><img src={data.img} width={70} alt={data.verbo} style={{borderRadius: '1rem'}}/></td>
                       <td>{data.verbo} - {data.adjetivo}</td>
                       <td>R${data.price}</td>
-                      <td><button className="d-flex justify-content-center align-items-center btn btn-outline-danger" style={{borderRadius: '1rem'}}>Excluir</button></td>
-                    </tr>                
+                  
+                    </tr>               
                   </tbody>
                 )
               })}
