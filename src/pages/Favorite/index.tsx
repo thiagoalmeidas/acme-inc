@@ -37,7 +37,7 @@ function Favorite() {
                       <th scope="row">{data.produtoId}</th>
                       <td><img src={data.img} width={70} alt={data.verbo} style={{borderRadius: '1rem'}}/></td>
                       <td>{data.verbo} - {data.adjetivo}</td>
-                      <td>R${data.price}</td>
+                      <td>R${data.price.toFixed(2)}</td>
                   
                     </tr>               
                   </tbody>

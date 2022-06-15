@@ -4,6 +4,7 @@ import Card from '../../components/card'
 import Header from '../../components/header'
 import Nav from '../../components/nav'
 import Footer from '../../components/footer'
+import {produtos} from '../../Data/produtos.json'
 
 
 
@@ -19,7 +20,7 @@ function Home() {
       img: 'https://picsum.photos/id/101/200/200'
     }
   ]
-
+  console.log(prods)
 
   const verbos = ["Armário", "Navio", "Mala", "Base", "Hidroavião", "Revista", "Carretel", "Minissaia",
     "Tamborim", "Andador", "Geladeira", "Estátua", "Rolo", "Crachá", "Peneira", "Bafômetro",
