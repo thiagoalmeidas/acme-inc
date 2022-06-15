@@ -19,6 +19,18 @@
  <p>* Página de Carrinho de compras (Concluído)</p>
  
  <h2>Funcionalidades</h2>
+ <p>* Para este exercício, iremos utilizar uma biblioteca aberta que disponibiliza
+imagens geradas randomicamente. Para este fim, use a seguinte API aberta: link
+(Licença)
+<p>* Você deverá garantir que a imagem dos itens não se altere ao longo da navegação em sua ferramenta.(Concluído)
+<p>* Para o conteúdo de cada item, como nome, descrição e valor unitário, segue a regra:
+<p>1 - Para nome do produto: Um conjunto de Verbo + Adjetivo gerado aleatoriamente (sem repetir) seguindo as listas de verbos e adjetivos presentes ao fim deste arquivo.(Concluído)
+<p>2 - Para descrição: Um texto randômico de sua escolha de 20 a 500 caracteres. (Concluído)
+<p>3 -Para valor, a seguinte pseudo-fórmula: 10 + nameLength * ((500 - descrLength) / (3 - nameLength)) (Concluído)
+<p> Regras para resolução:
+<p>a - nameLength: “O número de palavras da variável ‘nome’”
+<p>b - descrLength: O número total de caracteres da variável ‘descrição’ “ 
+
  <p>* Possibilidade de selecionarmos produtos como “favoritos”, em ambas as páginas (Não Resolvido) </p>
  <p>* Possibilidade de, na página inicial, filtrar produtos pelo status “favorito” ou pelo nome do produto (Não Resolvido)</p>
  <p>* Possibilidade de adicionar e remover itens do carrinho (carrinho e favorito são duas coisas diferentes!) (Não Resolvido)</p>
